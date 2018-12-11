@@ -8,6 +8,18 @@
         {
             "fieldName": "phone",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isable",
+            "fieldType": "Integer"
         }
     ],
     "relationships": [

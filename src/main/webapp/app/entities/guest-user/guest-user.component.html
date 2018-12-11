@@ -17,6 +17,9 @@
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="name"><span jhiTranslate="jhipsterApp.guestUser.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="phone"><span jhiTranslate="jhipsterApp.guestUser.phone">Phone</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="age"><span jhiTranslate="jhipsterApp.guestUser.age">Age</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sex"><span jhiTranslate="jhipsterApp.guestUser.sex">Sex</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isable"><span jhiTranslate="jhipsterApp.guestUser.isable">Isable</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -25,6 +28,9 @@
                 <td><a [routerLink]="['/guest-user', guestUser.id, 'view' ]">{{guestUser.id}}</a></td>
                 <td>{{guestUser.name}}</td>
                 <td>{{guestUser.phone}}</td>
+                <td>{{guestUser.age}}</td>
+                <td>{{guestUser.sex}}</td>
+                <td>{{guestUser.isable}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

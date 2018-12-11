@@ -46,6 +46,15 @@ public class GuestUserResourceIntTest {
     private static final String DEFAULT_PHONE = "AAAAAAAAAA";
     private static final String UPDATED_PHONE = "BBBBBBBBBB";
 
+    private static final Integer DEFAULT_AGE = 1;
+    private static final Integer UPDATED_AGE = 2;
+
+    private static final String DEFAULT_SEX = "AAAAAAAAAA";
+    private static final String UPDATED_SEX = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_ISABLE = 1;
+    private static final Integer UPDATED_ISABLE = 2;
+
     @Autowired
     private GuestUserRepository guestUserRepository;
 
@@ -88,7 +97,10 @@ public class GuestUserResourceIntTest {
     public static GuestUser createEntity(EntityManager em) {
         GuestUser guestUser = new GuestUser()
             .name(DEFAULT_NAME)
-            .phone(DEFAULT_PHONE);
+            .phone(DEFAULT_PHONE)
+            .age(DEFAULT_AGE)
+            .sex(DEFAULT_SEX)
+            .isable(DEFAULT_ISABLE);
         return guestUser;
     }
 
@@ -114,6 +126,9 @@ public class GuestUserResourceIntTest {
         GuestUser testGuestUser = guestUserList.get(guestUserList.size() - 1);
         assertThat(testGuestUser.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testGuestUser.getPhone()).isEqualTo(DEFAULT_PHONE);
+        assertThat(testGuestUser.getAge()).isEqualTo(DEFAULT_AGE);
+        assertThat(testGuestUser.getSex()).isEqualTo(DEFAULT_SEX);
+        assertThat(testGuestUser.getIsable()).isEqualTo(DEFAULT_ISABLE);
     }
 
     @Test
@@ -147,7 +162,10 @@ public class GuestUserResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(guestUser.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-            .andExpect(jsonPath("$.[*].phone").value(hasItem(DEFAULT_PHONE.toString())));
+            .andExpect(jsonPath("$.[*].phone").value(hasItem(DEFAULT_PHONE.toString())))
+            .andExpect(jsonPath("$.[*].age").value(hasItem(DEFAULT_AGE)))
+            .andExpect(jsonPath("$.[*].sex").value(hasItem(DEFAULT_SEX.toString())))
+            .andExpect(jsonPath("$.[*].isable").value(hasItem(DEFAULT_ISABLE)));
     }
     
     @Test
@@ -162,7 +180,10 @@ public class GuestUserResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(guestUser.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.phone").value(DEFAULT_PHONE.toString()));
+            .andExpect(jsonPath("$.phone").value(DEFAULT_PHONE.toString()))
+            .andExpect(jsonPath("$.age").value(DEFAULT_AGE))
+            .andExpect(jsonPath("$.sex").value(DEFAULT_SEX.toString()))
+            .andExpect(jsonPath("$.isable").value(DEFAULT_ISABLE));
     }
 
     @Test
@@ -187,7 +208,10 @@ public class GuestUserResourceIntTest {
         em.detach(updatedGuestUser);
         updatedGuestUser
             .name(UPDATED_NAME)
-            .phone(UPDATED_PHONE);
+            .phone(UPDATED_PHONE)
+            .age(UPDATED_AGE)
+            .sex(UPDATED_SEX)
+            .isable(UPDATED_ISABLE);
 
         restGuestUserMockMvc.perform(put("/api/guest-users")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -200,6 +224,9 @@ public class GuestUserResourceIntTest {
         GuestUser testGuestUser = guestUserList.get(guestUserList.size() - 1);
         assertThat(testGuestUser.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testGuestUser.getPhone()).isEqualTo(UPDATED_PHONE);
+        assertThat(testGuestUser.getAge()).isEqualTo(UPDATED_AGE);
+        assertThat(testGuestUser.getSex()).isEqualTo(UPDATED_SEX);
+        assertThat(testGuestUser.getIsable()).isEqualTo(UPDATED_ISABLE);
     }
 
     @Test

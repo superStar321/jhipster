@@ -21,7 +21,7 @@ describe('Service Tests', () => {
             service = injector.get(GuestUserService);
             httpMock = injector.get(HttpTestingController);
 
-            elemDefault = new GuestUser(0, 'AAAAAAA', 'AAAAAAA');
+            elemDefault = new GuestUser(0, 'AAAAAAA', 'AAAAAAA', 0, 'AAAAAAA', 0);
         });
 
         describe('Service methods', async () => {
@@ -56,7 +56,10 @@ describe('Service Tests', () => {
                 const returnedFromService = Object.assign(
                     {
                         name: 'BBBBBB',
-                        phone: 'BBBBBB'
+                        phone: 'BBBBBB',
+                        age: 1,
+                        sex: 'BBBBBB',
+                        isable: 1
                     },
                     elemDefault
                 );
@@ -74,7 +77,10 @@ describe('Service Tests', () => {
                 const returnedFromService = Object.assign(
                     {
                         name: 'BBBBBB',
-                        phone: 'BBBBBB'
+                        phone: 'BBBBBB',
+                        age: 1,
+                        sex: 'BBBBBB',
+                        isable: 1
                     },
                     elemDefault
                 );

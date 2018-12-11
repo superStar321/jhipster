@@ -31,6 +31,15 @@ public class GuestUser implements Serializable {
     @Column(name = "phone")
     private String phone;
 
+    @Column(name = "age")
+    private Integer age;
+
+    @Column(name = "sex")
+    private String sex;
+
+    @Column(name = "isable")
+    private Integer isable;
+
     @OneToMany(mappedBy = "guestUser")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Car> cars = new HashSet<>();
@@ -70,6 +79,45 @@ public class GuestUser implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public GuestUser age(Integer age) {
+        this.age = age;
+        return this;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public GuestUser sex(String sex) {
+        this.sex = sex;
+        return this;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Integer getIsable() {
+        return isable;
+    }
+
+    public GuestUser isable(Integer isable) {
+        this.isable = isable;
+        return this;
+    }
+
+    public void setIsable(Integer isable) {
+        this.isable = isable;
     }
 
     public Set<Car> getCars() {
@@ -149,6 +197,9 @@ public class GuestUser implements Serializable {
             "id=" + getId() +
             ", name='" + getName() + "'" +
             ", phone='" + getPhone() + "'" +
+            ", age=" + getAge() +
+            ", sex='" + getSex() + "'" +
+            ", isable=" + getIsable() +
             "}";
     }
 }

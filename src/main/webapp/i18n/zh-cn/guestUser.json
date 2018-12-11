@@ -17,6 +17,9 @@
             },
             "name": "Name",
             "phone": "Phone",
+            "age": "Age",
+            "sex": "Sex",
+            "isable": "Isable",
             "car": "Car",
             "gRole": "G Role"
         }
