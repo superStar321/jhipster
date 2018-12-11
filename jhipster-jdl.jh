@@ -1,0 +1,13 @@
+entity User {
+	name String,
+    phone String
+}
+entity Car {
+	carName String,
+    carBrand String
+}
+
+relationship OneToMany {
+	User{car} to Car{user}
+}
+
