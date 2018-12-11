@@ -1,0 +1,26 @@
+{
+    "name": "GuestRole",
+    "fields": [
+        {
+            "fieldName": "roleName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "gRole",
+            "otherEntityName": "gRole",
+            "otherEntityRelationshipName": "guestRole"
+        }
+    ],
+    "changelogDate": "20181211080930",
+    "entityTableName": "guest_role",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

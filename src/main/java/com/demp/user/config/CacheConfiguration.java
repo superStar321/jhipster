@@ -38,6 +38,13 @@ public class CacheConfiguration {
             cm.createCache(com.demp.user.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.demp.user.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.demp.user.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GuestUser.class.getName(), jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GuestUser.class.getName() + ".cars", jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.Car.class.getName(), jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GuestUser.class.getName() + ".gRoles", jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GuestRole.class.getName(), jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GuestRole.class.getName() + ".gRoles", jcacheConfiguration);
+            cm.createCache(com.demp.user.domain.GRole.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

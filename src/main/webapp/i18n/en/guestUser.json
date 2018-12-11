@@ -1,0 +1,24 @@
+{
+    "jhipsterApp": {
+        "guestUser": {
+            "home": {
+                "title": "Guest Users",
+                "createLabel": "Create a new Guest User",
+                "createOrEditLabel": "Create or edit a Guest User"
+            },
+            "created": "A new Guest User is created with identifier {{ param }}",
+            "updated": "A Guest User is updated with identifier {{ param }}",
+            "deleted": "A Guest User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Guest User {{ id }}?"
+            },
+            "detail": {
+                "title": "Guest User"
+            },
+            "name": "Name",
+            "phone": "Phone",
+            "car": "Car",
+            "gRole": "G Role"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "jhipsterApp": {
+        "guestRole": {
+            "home": {
+                "title": "Guest Roles",
+                "createLabel": "创建新 Guest Role",
+                "createOrEditLabel": "创建或编辑 Guest Role"
+            },
+            "created": "Guest Role {{ param }} 创建成功",
+            "updated": "Guest Role {{ param }} 更新成功",
+            "deleted": "Guest Role {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Guest Role {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Guest Role"
+            },
+            "roleName": "Role Name",
+            "gRole": "G Role"
+        }
+    }
+}

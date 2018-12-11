@@ -1,0 +1,36 @@
+{
+    "name": "GuestUser",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "car",
+            "otherEntityName": "car",
+            "otherEntityRelationshipName": "guestUser"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "gRole",
+            "otherEntityName": "gRole",
+            "otherEntityRelationshipName": "guestUser"
+        }
+    ],
+    "changelogDate": "20181211074923",
+    "entityTableName": "guest_user",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

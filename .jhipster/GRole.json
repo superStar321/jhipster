@@ -1,0 +1,27 @@
+{
+    "name": "GRole",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "guestUser",
+            "otherEntityName": "guestUser",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "guestRole",
+            "otherEntityName": "guestRole",
+            "otherEntityField": "roleName"
+        }
+    ],
+    "changelogDate": "20181211080931",
+    "entityTableName": "g_role",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

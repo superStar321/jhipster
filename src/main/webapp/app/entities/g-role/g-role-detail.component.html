@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="gRole">
+            <h2><span jhiTranslate="jhipsterApp.gRole.detail.title">G Role</span> {{gRole.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterApp.gRole.guestUser">Guest User</span></dt>
+                <dd>
+                    <div *ngIf="gRole.guestUser">
+                        <a [routerLink]="['/guest-user', gRole.guestUser?.id, 'view']">{{gRole.guestUser?.name}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterApp.gRole.guestRole">Guest Role</span></dt>
+                <dd>
+                    <div *ngIf="gRole.guestRole">
+                        <a [routerLink]="['/guest-role', gRole.guestRole?.id, 'view']">{{gRole.guestRole?.roleName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/g-role', gRole.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

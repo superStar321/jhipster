@@ -1,0 +1,24 @@
+{
+    "jhipsterApp": {
+        "guestUser": {
+            "home": {
+                "title": "Guest Users",
+                "createLabel": "创建新 Guest User",
+                "createOrEditLabel": "创建或编辑 Guest User"
+            },
+            "created": "Guest User {{ param }} 创建成功",
+            "updated": "Guest User {{ param }} 更新成功",
+            "deleted": "Guest User {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Guest User {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Guest User"
+            },
+            "name": "Name",
+            "phone": "Phone",
+            "car": "Car",
+            "gRole": "G Role"
+        }
+    }
+}

@@ -1,4 +1,4 @@
-entity User {
+entity GuestUser {
 	name String,
     phone String
 }
@@ -7,7 +7,19 @@ entity Car {
     carBrand String
 }
 
+entity GuestRole {
+	roleName String
+}
+entity GRole{}
+
+
 relationship OneToMany {
-	User{car} to Car{user}
+	GuestUser{car} to Car{guestUser(name)},
+	GuestUser{gRole} to GRole{guestUser(name)},
+	GuestRole{gRole} to GRole{guestRole(roleName)}
 }
 
+paginate GuestRole with infinite-scroll
+paginate GuestUser, Car, GRole with pagination
+
+service all with serviceImpl

@@ -1,0 +1,22 @@
+{
+    "jhipsterApp": {
+        "gRole": {
+            "home": {
+                "title": "G Roles",
+                "createLabel": "Create a new G Role",
+                "createOrEditLabel": "Create or edit a G Role"
+            },
+            "created": "A new G Role is created with identifier {{ param }}",
+            "updated": "A G Role is updated with identifier {{ param }}",
+            "deleted": "A G Role is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete G Role {{ id }}?"
+            },
+            "detail": {
+                "title": "G Role"
+            },
+            "guestUser": "Guest User",
+            "guestRole": "Guest Role"
+        }
+    }
+}

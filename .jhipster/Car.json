@@ -1,0 +1,30 @@
+{
+    "name": "Car",
+    "fields": [
+        {
+            "fieldName": "carName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "carBrand",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "guestUser",
+            "otherEntityName": "guestUser",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20181211074924",
+    "entityTableName": "car",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
